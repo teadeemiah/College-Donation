@@ -134,6 +134,7 @@
     <ClCompile Include="Donor.cpp" />
     <ClCompile Include="FileLoader.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CollegeList.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="DonationManager.h" />
     <ClInclude Include="Donor.h" />
     <ClInclude Include="FileLoader.h" />
+    <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="colleges.csv" />

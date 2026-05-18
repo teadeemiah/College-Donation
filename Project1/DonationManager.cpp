@@ -22,6 +22,7 @@ int DonationManager::addDonor(const string& donorName)
     return assignedID;
 }
 
+
 void DonationManager::addCollege(const string& collegeCode,
                                   const string& collegeName)
 {
@@ -36,9 +37,29 @@ void DonationManager::addDonation(const string& donorName,
     donations.addDonation(Donation(donorName, collegeCode, amount));
 }
 
+//New PartB overload - locate the donor associated with the given donor ID, 
+//retrieve the donor’s name, create a Donation object, and add it to the list of donations
+void DonationManager::addDonation(int donorID, 
+                                   const string& collegeCode, 
+                                   double amount)
+{
+    string donorName = "";
+
+    for (const Donor& donor : donors)
+    {
+        if (donor.getDonorID() == donorID)
+        {
+            donorName = donor.getDonorName();
+            break;
+        }
+    }
+
 void DonationManager::printColleges() const
 {
-    colleges.printColleges();
+	const map<string, string>& collegeMap = colleges.getColleges();
+
+	for (const auto& entry : collegeMap)
+        cout << "\t" << entry.first << " - " << entry.second << "\n";
 }
 
 void DonationManager::printDonationsByCollege() const

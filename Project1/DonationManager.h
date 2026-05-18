@@ -28,6 +28,8 @@ public:
 	//add new donor with new ID, return the assigned ID.
     int  addDonor(const std::string& donorName);
 
+    void addDonation(int donorID, const std::string& collegeCode, double amount);
+
     // One statement.
     void addCollege(const std::string& collegeCode,
                     const std::string& collegeName);
