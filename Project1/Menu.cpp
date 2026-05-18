@@ -39,6 +39,7 @@ void processUserChoices(DonationManager& manager)
     while (true)
     {
         displayMenu();
+		cout << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
